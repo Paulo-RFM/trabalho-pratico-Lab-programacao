@@ -1,6 +1,6 @@
-CREATE SCHEMA EventManagement;
+CREATE SCHEMA eventofacildb;
 
-CREATE TABLE EventManagement.users (
+CREATE TABLE eventofacildb.usuario (
     ID int not NULL auto_increment primary key,
     nome varchar(50),
     email varchar(60),
@@ -8,7 +8,7 @@ CREATE TABLE EventManagement.users (
     tipo varchar(15)
 );
 
-CREATE TABLE EventManagement.events (
+CREATE TABLE eventofacildb.evento (
     ID int primary key not null,
     titulo varchar(50),
     descricao varchar(100),
@@ -19,7 +19,7 @@ CREATE TABLE EventManagement.events (
     OID img
 );
 
-CREATE TABLE EventManagement.registrations (
+CREATE TABLE eventofacildb.registrations (
     ID int primary key not NULL,
     usuario varchar(50),
     evento varchar(50),
@@ -27,7 +27,7 @@ CREATE TABLE EventManagement.registrations (
     vendedor int 
 );
 
-CREATE TABLE EventManagement.reviews (
+CREATE TABLE eventofacildb.reviews (
     ID int not null auto_increment,
     comentario varchar(200),
     avaliacao int,
@@ -36,7 +36,7 @@ CREATE TABLE EventManagement.reviews (
 
 );
 
-CREATE TABLE EventManagement.categories (
+CREATE TABLE eventofacildb.categories (
     ID int not null auto_increment,
     categoria varchar(40)    
 );
