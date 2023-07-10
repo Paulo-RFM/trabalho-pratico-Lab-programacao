@@ -1,26 +1,25 @@
 CREATE SCHEMA eventofacildb;
 
 CREATE TABLE eventofacildb.usuario (
-    ID int not NULL auto_increment primary key,
+    id int not NULL auto_increment primary key,
     nome varchar(50),
     email varchar(60),
-    senha varchar(20),
-    tipo varchar(15)
+    senha varchar(20)
 );
 
 CREATE TABLE eventofacildb.evento (
-    ID int primary key not null,
-    titulo varchar(50),
+    id int primary key not null,
+    nome varchar(50),
     descricao varchar(100),
-    epoca date,
-    hora varchar(5),
+    dataEvento date,
+    data date,
     categoria varchar(20),
     preco int,
-    OID img
+    path text
 );
 
 CREATE TABLE eventofacildb.registrations (
-    ID int primary key not NULL,
+    id int primary key not NULL,
     usuario varchar(50),
     evento varchar(50),
     pagamento int,
@@ -28,7 +27,7 @@ CREATE TABLE eventofacildb.registrations (
 );
 
 CREATE TABLE eventofacildb.reviews (
-    ID int not null auto_increment,
+    id int not null auto_increment,
     comentario varchar(200),
     avaliacao int,
     usuario varchar(50),
@@ -37,6 +36,6 @@ CREATE TABLE eventofacildb.reviews (
 );
 
 CREATE TABLE eventofacildb.categories (
-    ID int not null auto_increment,
+    id int not null auto_increment,
     categoria varchar(40)    
 );
